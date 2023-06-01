@@ -45,7 +45,7 @@ class Manager extends Employee {
         if (this.team.length >= 10) {
             salary += 300;
         }
-        if (this.team.filter((teammate) => teammate.constructor.name == 'Developer').length > this.team.length / 2) {
+        if (this.team.filter((teammate) => teammate instanceof Developer).length > this.team.length / 2) {
             salary *= 1.1;
         }
         return salary.toFixed();
